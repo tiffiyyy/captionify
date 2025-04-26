@@ -1,0 +1,22 @@
+{
+    "testId": "b83e101f-7adc-4c5b-95a9-881c69a02f86",
+    "name": "Captionify",
+    "version": "1.0.0",
+    "manifestVersion": 2,
+    "requirements": {
+        "apps": [
+            {
+                "name": "Express",
+                "apiVersion": 1
+            }
+        ]
+    },
+    "entryPoints": [
+        {
+            "type": "panel",
+            "id": "panel1",
+            "main": "index.html",
+            "documentSandbox": "sandbox/code.js"
+        }
+    ]
+}

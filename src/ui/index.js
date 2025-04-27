@@ -16,6 +16,13 @@ addOnUISdk.ready.then(async () => {
         await sandboxProxy.createRectangle();
     });
 
+    const videoInput = document.getElementById('video-upload');
+
+    videoInput.addEventListener('change', function(event) {
+    const selectedFile = event.target.files[0];
+        console.log(selectedFile);
+    });
+
     // Enable the button only when:
     // 1. `addOnUISdk` is ready,
     // 2. `sandboxProxy` is available, and

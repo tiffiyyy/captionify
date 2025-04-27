@@ -1,6 +1,3 @@
-print("hello\n")
-"""
-import librosa
 import whisper
 import os
 

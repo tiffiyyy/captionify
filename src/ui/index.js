@@ -20,9 +20,10 @@ addOnUISdk.ready.then(async () => {
     const fileNameDisplay = document.getElementById('file-name');
 
     videoInput.addEventListener('change', function(event) {
-    const selectedFile = event.target.files[0];
+        //await sandboxProxy.
+        const selectedFile = event.target.files[0];
         console.log(selectedFile);
-        
+
 
         if (selectedFile) {
             fileNameDisplay.textContent = `Selected Video: ${selectedFile.name}`;
@@ -30,6 +31,17 @@ addOnUISdk.ready.then(async () => {
             fileNameDisplay.textContent = ''; // Clear it if no file
           }
     });
+
+    const formData = new FormData();
+    formData.append('video', fileInput.files[0]);
+
+    fetch('https://18ae-129-210-115-230.ngrok-free.app/uploads/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(r => r.text())
+    .then(console.log("success"))
+    .catch(error => console.error("Error uploading:", error));
 
     // Enable the button only when:
     // 1. `addOnUISdk` is ready,

@@ -1,4 +1,3 @@
-import librosa
 import whisper
 import os
 

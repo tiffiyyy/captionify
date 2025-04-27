@@ -17,10 +17,17 @@ addOnUISdk.ready.then(async () => {
     });
 
     const videoInput = document.getElementById('video-upload');
+    const fileNameDisplay = document.getElementById('file-name');
 
     videoInput.addEventListener('change', function(event) {
     const selectedFile = event.target.files[0];
         console.log(selectedFile);
+
+        if (selectedFile) {
+            fileNameDisplay.textContent = `Selected Video: ${selectedFile.name}`;
+          } else {
+            fileNameDisplay.textContent = ''; // Clear it if no file
+          }
     });
 
     // Enable the button only when:

@@ -95,3 +95,8 @@ print("averages length:", len(averages))
 plt.subplot(4, 1, 4)
 plt.plot(extracted_onset_values, averages)
 plt.show()
+
+def getOnsetVals():
+    return extracted_onset_values
+def getAverages():
+    return averages

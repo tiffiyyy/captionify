@@ -1,3 +1,4 @@
+#Code by David
 import whisper
 import os
 
@@ -27,4 +28,6 @@ result = model.transcribe(files[0], fp16 = False)
 
 # print the result
 print(result["text"])
-"""
+
+def getResult(type:str):
+    return result[type]

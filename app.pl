@@ -40,7 +40,7 @@ post '/uploads/' => sub {
     # print "Running transcribe on: $filename\n"; 
 
     # Call Python Whisper to transcribe
-    my $output = `python3 backend/src/transcribe.py "$filename"`;
+    my $output = `python backend/src/transcribe.py "$filename"`;
 
     # Returns formatted 
     #return "<h2>Transcription:</h2><pre>$output</pre>";

@@ -6,7 +6,7 @@ from moviepy.video.compositing.CompositeVideoClip import CompositeVideoClip
 import transcribe
 import analyze_onsets
 
-video_input_path = "/audio/file_example_MP4_480_1_5MG"
+video_input_path = "/audio/sandwich"
 output_video_path ="/finalVid/"
 
 avgs = analyze_onsets.getAverages

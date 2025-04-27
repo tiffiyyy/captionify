@@ -22,6 +22,7 @@ addOnUISdk.ready.then(async () => {
     videoInput.addEventListener('change', function(event) {
     const selectedFile = event.target.files[0];
         console.log(selectedFile);
+        
 
         if (selectedFile) {
             fileNameDisplay.textContent = `Selected Video: ${selectedFile.name}`;

@@ -74,7 +74,11 @@
             </div>
             <!-- Start of Linus HTML Code // Last Updated: 4:30 pm -->
             <div class="container">
-                <input type="file" id="video-upload" accept="video/*" />
+                <form method="POST" enctype="multipart/form-data" action ="/upload"><!--sends data inside of form to /upload-->
+                    <input type="file" id="video-upload" accept="video/*" />
+                    <br>
+                    <input type="submit" value = "Upload and Transcribe">
+                </form>
             </div>
             <div style = "text-align: center"> 
             <p id = "file-name"></p>
